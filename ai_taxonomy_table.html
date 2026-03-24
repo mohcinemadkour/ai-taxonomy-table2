@@ -1,0 +1,106 @@
+
+<style>
+  .wrap { padding: 8px 0; font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    padding: 10px 12px;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-tertiary);
+    background: var(--color-background-secondary);
+  }
+  thead th:first-child { color: #fff; background: #1a3d2b; border-radius: 8px 0 0 0; padding-left: 16px; }
+  tbody tr { border-bottom: 1px solid var(--color-border-tertiary); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody td {
+    padding: 12px 12px;
+    vertical-align: middle;
+    color: var(--color-text-primary);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  tbody td:first-child {
+    background: #1a3d2b;
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    text-align: center;
+    padding: 12px 16px;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td:first-child { border-radius: 0 0 0 8px; }
+  tbody td:not(:first-child) { background: var(--color-background-primary); }
+  tbody tr:nth-child(even) td:not(:first-child) { background: var(--color-background-secondary); }
+  .badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .badge-low    { background: #e1f5ee; color: #085041; }
+  .badge-mod    { background: #faeeda; color: #633806; }
+  .badge-high   { background: #faece7; color: #4a1b0c; }
+  .badge-vhigh  { background: #fcebeb; color: #501313; }
+  @media (prefers-color-scheme: dark) {
+    .badge-low    { background: #04342c; color: #9fe1cb; }
+    .badge-mod    { background: #412402; color: #fac775; }
+    .badge-high   { background: #4a1b0c; color: #f5c4b3; }
+    .badge-vhigh  { background: #501313; color: #f7c1c1; }
+    tbody td:first-child, thead th:first-child { background: #0d2619; }
+    thead th:first-child { color: #9fe1cb; }
+  }
+  .examples { color: var(--color-text-secondary); font-size: 12px; margin-top: 2px; }
+</style>
+<div class="wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Technology</th>
+        <th>Definition</th>
+        <th>Level of autonomy</th>
+        <th>Primary use</th>
+        <th>Examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NLP</td>
+        <td>AI that understands and processes human language</td>
+        <td><span class="badge badge-low">Low</span></td>
+        <td>Sentiment analysis, classification, entity extraction</td>
+        <td class="examples">spaCy, BERT, Named Entity Recognition tools</td>
+      </tr>
+      <tr>
+        <td>ML</td>
+        <td>Models that learn from data to make predictions or classifications</td>
+        <td><span class="badge badge-low">Low</span></td>
+        <td>Forecasting, fraud detection, churn prediction</td>
+        <td class="examples">XGBoost, scikit-learn, TensorFlow</td>
+      </tr>
+      <tr>
+        <td>GenAI</td>
+        <td>AI that generates new content (text, code, images) based on prompts</td>
+        <td><span class="badge badge-mod">Moderate</span></td>
+        <td>Text summarization, code gen, synthetic data</td>
+        <td class="examples">GPT-4, Claude, Gemini, DALL·E</td>
+      </tr>
+      <tr>
+        <td>Agents</td>
+        <td>Software entities that use AI to pursue goals by taking actions</td>
+        <td><span class="badge badge-high">High</span></td>
+        <td>Task orchestration, digital assistants</td>
+        <td class="examples">Microsoft Copilot, LangChain agents</td>
+      </tr>
+      <tr>
+        <td>Agentic AI</td>
+        <td>Autonomous AI systems that plan, reason, and act to achieve goals across tools</td>
+        <td><span class="badge badge-vhigh">Very High</span></td>
+        <td>Research agents, multi-step process automation</td>
+        <td class="examples">AutoGPT, AgentGPT, LangGraph</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

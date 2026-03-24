@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Technology Taxonomy</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f9f7f4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 24px;
+    min-height: 100vh;
+  }
+
+  .article-block {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  .table-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a3d2b;
+    margin-bottom: 10px;
+  }
+
+  .table-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #111;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .table-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .table-wrapper {
+    border: 1px solid #e2ded8;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead tr {
+    background: #1a3d2b;
+  }
+
+  thead th {
+    padding: 13px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  thead th:first-child {
+    color: #7ecba8;
+    width: 110px;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #f0ece6;
+    transition: background 0.15s ease;
+  }
+
+  tbody tr:last-child { border-bottom: none; }
+
+  tbody tr:hover { background: #faf8f5; }
+
+  tbody td {
+    padding: 15px 16px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: #2a2a2a;
+    vertical-align: top;
+  }
+
+  tbody td:first-child {
+    background: #1a3d2b;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+    width: 110px;
+    border-right: none;
+  }
+
+  tbody tr:hover td:first-child { background: #1a3d2b; }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .badge-low    { background: #e8f5ee; color: #0f6e56; }
+  .badge-low::before { background: #1d9e75; }
+
+  .badge-mod    { background: #fdf3e0; color: #854f0b; }
+  .badge-mod::before { background: #ef9f27; }
+
+  .badge-high   { background: #fdeee8; color: #993c1d; }
+  .badge-high::before { background: #d85a30; }
+
+  .badge-vhigh  { background: #fceaea; color: #a32d2d; }
+  .badge-vhigh::before { background: #e24b4a; }
+
+  .cell-def { color: #3a3a3a; }
+
+  .cell-use {
+    color: #444;
+  }
+
+  .cell-examples {
+    color: #777;
+    font-size: 12.5px;
+  }
+
+  .divider-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #aaa;
+  }
+
+  .divider-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e6e2dc;
+  }
+
+  .caption {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #999;
+    line-height: 1.6;
+    font-style: italic;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="article-block">
+
+  <p class="table-label">Reference</p>
+  <h2 class="table-title">The AI Technology Stack</h2>
+  <p class="table-subtitle">From rule-based NLP to fully autonomous agentic systems — how the major paradigms differ in scope, capability, and decision-making power.</p>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Technology</th>
+          <th>Definition</th>
+          <th>Autonomy</th>
+          <th>Primary use</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NLP</td>
+          <td class="cell-def">AI that understands and processes human language</td>
+          <td><span class="badge badge-low">Low</span></td>
+          <td class="cell-use">Sentiment analysis, classification, entity extraction</td>
+          <td class="cell-examples">spaCy, BERT, Named Entity Recognition tools</td>
+        </tr>
+        <tr>
+          <td>ML</td>
+          <td class="cell-def">Models that learn from data to make predictions or classifications</td>
+          <td><span class="badge badge-low">Low</span></td>
+          <td class="cell-use">Forecasting, fraud detection, churn prediction</td>
+          <td class="cell-examples">XGBoost, scikit-learn, TensorFlow</td>
+        </tr>
+        <tr>
+          <td>GenAI</td>
+          <td class="cell-def">AI that generates new content (text, code, images) based on prompts</td>
+          <td><span class="badge badge-mod">Moderate</span></td>
+          <td class="cell-use">Text summarization, code generation, synthetic data</td>
+          <td class="cell-examples">GPT-4, Claude, Gemini, DALL·E</td>
+        </tr>
+        <tr>
+          <td>Agents</td>
+          <td class="cell-def">Software entities that use AI to pursue goals by taking actions</td>
+          <td><span class="badge badge-high">High</span></td>
+          <td class="cell-use">Task orchestration, digital assistants</td>
+          <td class="cell-examples">Microsoft Copilot, LangChain agents</td>
+        </tr>
+        <tr>
+          <td>Agentic AI</td>
+          <td class="cell-def">Autonomous AI systems that plan, reason, and act across tools</td>
+          <td><span class="badge badge-vhigh">Very High</span></td>
+          <td class="cell-use">Research agents, multi-step process automation</td>
+          <td class="cell-examples">AutoGPT, AgentGPT, LangGraph</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="caption">Autonomy increases as systems move from pattern recognition (NLP/ML) to generative reasoning (GenAI) to goal-directed action (Agents, Agentic AI).</p>
+
+</div>
+</body>
+</html>
